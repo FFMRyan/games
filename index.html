@@ -7,7 +7,7 @@
 			html, body{border: 0;overflow-x: hidden;font-family: "PingFang SC","Helvetica Neue","Helvetica","STHeitiSC-Light","Arial",sans-serif;margin: 0; padding: 0; }
             *{-webkit-box-sizing: border-box; box-sizing: border-box;-moz-box-sizing: border-box;padding:0;margin:0;-webkit-text-size-adjust: 100%; }
             a,a:hover,a:active,a:visited,a:link,a:focus,label,div{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;outline:none;text-decoration: none;}
-            .game_wrap{background: url(bg1.jpg) ;background-size: cover;overflow: hidden;padding-bottom: 300px;}
+            .game_wrap{background: url(images/bg1.jpg) ;background-size: cover;overflow: hidden;padding-bottom: 300px;}
             .game_inner{
             		width: 1000px;
             		margin: 0 auto;
@@ -19,11 +19,10 @@
             		margin: 30px auto;
             		padding: 20px;
             		background: rgba(0,0,0,0.65);
-            		border-radius: 20px;
             		color: #fff;
             }
-            .game_intro .rule{float: left;}
-            .game_intro .notice{float: right;}
+            .game_intro .rule{float: left;width: 50%;margin-right: 30px;}
+            .game_intro .notice{float: right;width: 40%;}
             .game_intro .rule>div,.game_intro .notice>div{
             		font-size: 18px;
             		font-weight: 500;
@@ -51,6 +50,9 @@
             		text-align: center;
             		border-bottom:1px solid  rgba(255,255,255,0.2);
             }
+            .common_list .type_name{color: #fff;}
+            .nob_list .type_name{color: #fa9534;}
+            .king_list .type_name{color: #ff007f;}
             .game_list .room{
             		padding: 15px 0 15px 60px;
             		border-bottom:1px solid  rgba(255,255,255,0.2);
@@ -60,17 +62,28 @@
             		font-size: 16px;
             		color:  rgba(255,255,255,0.8);
             }
+            .game_list .room:last-child{border-bottom: none;}
             .game_list .choose>a{
             		display: inline-block;
             		margin-top: 5px;
-            		width: 50px;
-            		height: 50px;
-            		line-height: 50px;
+            		width: 55px;
+            		height: 55px;
+            		line-height: 55px;
             		color: #fff;
+            		font-size: 14px;
             		text-align: center;
-            		border: 1px solid #fff;
             		border-radius: 50%;
             		margin-right: 10px;
+            		background: url(images/btn1.png) no-repeat;
+            		background-size: 100%;
+            		transition: all 0.4s ease-in-out;
+            		-webkit-transition: all 0.4s ease-in-out;
+            }
+            .common_list .choose>a{background: url(images/btn1.png) no-repeat;background-size: 100%;}
+            .nob_list .choose>a{background: url(images/btn2.png) no-repeat;background-size: 100%;color:#fa9534;}
+            .king_list .choose>a{background: url(images/btn3.png) no-repeat;background-size: 100%;color:#ff007f;}
+            .game_list .choose>a:hover{
+            		transform: rotate(360deg);
             }
 		</style>
 	</head>
@@ -82,106 +95,95 @@
 				<div class="game_intro">
 					<div class="rule">
 						<div>Rule</div>
-						<p>1、每个游戏满10人开局</p>
-						<p>2、游戏分为平民、贵族、王族三个等级</p>
-						<p>3、游戏分为平民、贵族、王族三个等级</p>
+						<p>1. Each game starts with 10 people.</p>
+						<p>2. The game is divided into three levels: civilian, noble and royal.</p>
+						<p>3. civilian need 0.01 ETH、noble need 0.1 ETH and royal need 1 ETH at least.</p>
 					</div>
 					<div class="notice">
-						<div>Notice</div>
-						<p>1、您需在Chrome内核的浏览器，安装钱包插件<a href="https://metamask.io/"> https://metamask.io/</a></p>
-						<p>2、册册册册册册册册册</p>
-						<p>2、册册册册册册册册册</p>
+						<div>Notices</div>
+						<p>1. Frist you need Install wallet plug-in In the Chrome kernel browser <a href="https://metamask.io/"> https://metamask.io/</a></p>
 					</div>
 				</div>
 				<!--平民、贵族、王族-->			
 				<div class="game_all">
-					<div class="game_list">
-						<div class="type_name">平民区</div>
+					<div class="game_list common_list">
+						<div class="type_name">Civilian areas</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 					</div>
-					<div class="game_list">
-						<div class="type_name">贵族区</div>
+					<div class="game_list nob_list">
+						<div class="type_name">Noble areas</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 					</div>
-					<div class="game_list">
-						<div class="type_name">王族专区</div>
+					<div class="game_list king_list">
+						<div class="type_name">Royal area</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 						<div class="room">
 							<p>本次游戏需10个玩家参与</p>
 							<p>本次游戏需10个玩家参与</p>
 							<div class="choose">
-								<a href="#">大</a>
-								<a href="#">中</a>
-								<a href="#">小</a>
+								<a href="#">Big</a>
+								<a href="#">Small</a>
 							</div>
 						</div>
 					</div>
